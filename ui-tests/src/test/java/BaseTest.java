@@ -14,15 +14,20 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
     HomePage homePage;
-    UiProperites prop = ConfigFactory.create(UiProperites.class);
+    static UiProperites prop = ConfigFactory.create(UiProperites.class);
 
     @BeforeAll
     @Step("Базовая инициализация")
     static void setBaseParam() {
-        //Configuration.remote = "http://158.160.160.185:4444/wd/hub";
-        Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "120";
+//        Configuration.remote = "http://158.160.160.185:4444/wd/hub";
+//        Configuration.remote = "http://localhost:4444/wd/hub";
+//        Configuration.browser = "chrome";
+//        Configuration.browserVersion = "120";
+
+        Configuration.remote = prop.selenideServer();
+        Configuration.browser = prop.browser();
+        Configuration.browserVersion = prop.browserVersion();
+
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
