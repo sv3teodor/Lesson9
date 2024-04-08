@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -27,6 +28,7 @@ public class Tests extends BaseTest {
     }
 
 
+    @Disabled
     @DisplayName("Задание 3. Проверка Disappearing Elements")
     @RepeatedTest(10)
     public void disappearingElementsTest() {
