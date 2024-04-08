@@ -19,8 +19,8 @@ public class BaseTest {
     @BeforeAll
     @Step("Базовая инициализация")
     static void setBaseParam() {
-        //Configuration.remote = "http://158.160.139.169:4444/wd/hub";
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "http://158.160.160.185:4444/wd/hub";
+        //Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
         Configuration.browserVersion = "120";
 
