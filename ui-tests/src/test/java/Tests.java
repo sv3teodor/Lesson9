@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class Tests extends BaseTest {
 
-    @Test
+    @RepeatedTest(10)
     @DisplayName("Задание 1. Проверка чекбоксов")
     public void checkBoxesTest() {
         int targetCheckBox = 0;
