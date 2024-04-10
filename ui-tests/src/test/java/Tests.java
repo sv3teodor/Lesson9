@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class Tests extends BaseTest {
 
-    @RepeatedTest(10)
+    //@RepeatedTest(10)
+    @Test
     @DisplayName("Задание 1. Проверка чекбоксов")
     public void checkBoxesTest() {
         int targetCheckBox = 0;
@@ -28,9 +29,9 @@ public class Tests extends BaseTest {
     }
 
 
-    @Disabled
     @DisplayName("Задание 3. Проверка Disappearing Elements")
     @RepeatedTest(10)
+    @Test
     public void disappearingElementsTest() {
         homePage.clickDisappearingElementsLink()
                 .check()

@@ -24,9 +24,9 @@ public class BaseTest {
 //        Configuration.browser = "chrome";
 //        Configuration.browserVersion = "120";
 
-        Configuration.remote = prop.selenideServer();
-        Configuration.browser = prop.browser();
-        Configuration.browserVersion = prop.browserVersion();
+    //  Configuration.remote = prop.selenideServer();
+        //Configuration.browser = prop.browser();
+       // Configuration.browserVersion = prop.browserVersion();
 
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
